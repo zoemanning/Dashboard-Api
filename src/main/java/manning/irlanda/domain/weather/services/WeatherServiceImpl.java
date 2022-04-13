@@ -27,7 +27,7 @@ public class WeatherServiceImpl implements WeatherService {
     @Override
     public Optional<WeatherApiResponse> requestDataFromApi(String lat, String lon) {
         try {
-            String url = "https://api.openweathermap.org/data/2.5/weather?lat=%s&lon=%s&appid=%s";
+            String url = "https://api.openweathermap.org/data/2.5/weather?lat=%s&lon=%s&appid=%s&units=imperial";
             String requestUrl = String.format(url, lat, lon, apiKey);
             ResponseEntity<WeatherApiResponse> response = restTemplate.exchange(requestUrl, HttpMethod.GET, null, WeatherApiResponse.class);
             WeatherApiResponse apiResponse = response.getBody();

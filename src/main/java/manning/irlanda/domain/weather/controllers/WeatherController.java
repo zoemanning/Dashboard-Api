@@ -3,7 +3,6 @@ package manning.irlanda.domain.weather.controllers;
 import lombok.extern.slf4j.Slf4j;
 import manning.irlanda.domain.weather.models.WeatherApiResponse;
 import manning.irlanda.domain.weather.services.WeatherService;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
